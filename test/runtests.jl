@@ -15,3 +15,7 @@ test(f, g, r=0:0.001:π, e=0.002) = maximum(@. abs(f(r)-g(r)) ) < e
 @test test(Bhaskara.cos, Base.cos, -3π:0.001:3π)
 
 @test bsin(big(0.1)) isa BigFloat
+@test bsin(Float32(0.2)) isa Float32
+@test bcos(big(0.1)) isa BigFloat
+@test bcos(Float32(0.2)) isa Float32
+
